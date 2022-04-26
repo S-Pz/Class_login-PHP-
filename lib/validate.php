@@ -8,5 +8,4 @@ function loginCompare($loginOficial, $passOficial){
     }
     return 0;
 }
-
 ?>
