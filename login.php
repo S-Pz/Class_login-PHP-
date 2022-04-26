@@ -9,6 +9,7 @@
     
         if(loginCompare($user, $password) === 1){
             header('Location: ./home.php ');
+            
         }else{
             header('Location: ./login.php?login=erro ');
         }
@@ -27,8 +28,13 @@
     <main>
         <form action="login.php" method="post">
             <p>Your username: <input type="text" name="username"/></p>
-            <p>Your password: <input type="text" name="password"/></p>
-
+            <p>Your password: <input type="password" name="password"/></p>
+                <?php
+                
+                    if(isset($_GET['username'])=== 'erro'){
+                        echo '<h4> Erro no login </h4>';
+                    }
+                ?>
             <p><input type="submit" value="Enviar"/></p>
         </form>
     </main>
